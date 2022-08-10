@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-Up</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="/login.css" />
+  <link rel="stylesheet" href="/login-res.css" />
+
+  <script defer src="/script.js"></script>
+</head>
+
+<body>
+  <section class="home-banner">
+    <div class="login-form">
+      <div>
+        <div class="profile">
+          <div class="profile-img"></div>
+        </div>
+        <div class="form">
+          <form autocomplete="off" action='/' method="post">
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i><input type="email" placeholder="Enter Email " name="email"
+                required />
+            </div>
+            <div class="username">
+              <i class="fa-solid fa-user"></i><input type="text" autocomplete="off" id='username-input'
+                placeholder="Username" name="username" required />
+              <i id='valid-username-mark' class="fa-solid fa-check"></i>
+              <i id='invalid-username-mark' class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="password">
+              <i class="fa-solid fa-lock"></i><input type="password" placeholder="Password" name="password" required />
+            </div>
+            <button type="submit" class="submit-btn " id="signup-btn">Sign Up</button>
+
+          </form>
+          <p class="description">Already have an account ? &nbsp;<a href='/login.html'>Sign In</a></p>
+        </div>
+      </div>
+    </div>
+
+    <button class="background-btn"></button>
+  </section>
+
+</body>
+
+</html>

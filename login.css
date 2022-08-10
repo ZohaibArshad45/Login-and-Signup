@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --background-1: #158eea; */
+  --background-1: #7cb9e8;
+  --background-2: #090d1d;
+}
+
+.home-banner {
+  width: 100%;
+  height: 100vh;
+  min-height: 570px;
+  overflow-y: auto;
+  background: var(--background-1);
+  position: absolute;
+}
+
+.home-banner::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background-2);
+  content: "";
+  clip-path: circle(30px at 98% 3%);
+  opacity: 0;
+  transition: 0.6s all;
+}
+
+.home-banner.active::before {
+  clip-path: circle(100% at center center);
+  opacity: 1;
+}
+
+.home-banner .background-btn {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border: 50px;
+  border: #3aad43;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  border-radius: 20%;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  outline:none;
+}
+
+
+.home-banner .login-form > div {
+  z-index: 10;
+}
+
+.home-banner .login-form {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.home-banner .login-form .profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+.home-banner .login-form .profile .profile-img {
+  width: 150px;
+  border-radius: 50%;
+  height: 150px;
+  background-image: url(/Pic/Cartoon.png);
+  background-position: center;
+  transition: 1s background-image;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.213);
+  background-size: cover;
+}
+
+.home-banner.active .login-form .profile .profile-img {
+  background-image: url(/Pic/hacker2.jpeg);
+  transition: 1s background-image;
+}
+
+.login-form form div {
+  background-color: white;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.209);
+}
+
+.login-form form div input {
+  background-color: white;
+  height: 30px;
+  outline: none;
+  border: none;
+  color: rgb(73, 73, 73);
+  letter-spacing: 1px;
+  width: 85%;
+}
+
+.login-form form .username {
+  position: relative;
+}
+.login-form form .username .fa-check {
+  color: rgb(60, 255, 0);
+  display: none;
+}
+.login-form form .username .fa-xmark {
+  color: rgb(255, 0, 0);
+  display: none;
+}
+.login-form form .username .fa-xmark,
+.login-form form .username .fa-check {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.login-form form div .fa-solid {
+  font-size: 17px;
+  margin-right: 8px;
+  transform: translateY(2px);
+}
+
+.login-form form .submit-btn {
+  width: 350px;
+  outline: none;
+  padding: 13px 0px;
+  border: none;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.209);
+  outline: none;
+}
+
+.login-form .form p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #3f3844;
+}
+.login-form .form p a {
+  color: #ef2d56;
+  transition: 0.6s color;
+  font-weight: 500;
+}
+
+.home-banner.active .login-form .form p a {
+  color: #3aad43;
+}
